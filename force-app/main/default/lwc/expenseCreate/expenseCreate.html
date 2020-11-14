@@ -1,0 +1,10 @@
+<template>
+<lightning-card title="Create Expense" icon-name="standard:address">
+    <lightning-record-form
+        object-api-name={expenseObject}
+        fields={fields}
+        columns="2"
+        onsuccess={handleExpenseCreated}>
+    </lightning-record-form>
+    </lightning-card>
+</template>

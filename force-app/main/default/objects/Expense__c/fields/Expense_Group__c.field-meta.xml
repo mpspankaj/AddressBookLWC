@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Expense Group</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Pankaj</fullName>
+                <default>false</default>
+                <label>Pankaj</label>
+            </value>
+            <value>
+                <fullName>Neeraj</fullName>
+                <default>false</default>
+                <label>Neeraj</label>
+            </value>
+            <value>
+                <fullName>Sunita</fullName>
+                <default>false</default>
+                <label>Sunita</label>
+            </value>
+            <value>
+                <fullName>S-Presso</fullName>
+                <default>false</default>
+                <label>S-Presso</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
