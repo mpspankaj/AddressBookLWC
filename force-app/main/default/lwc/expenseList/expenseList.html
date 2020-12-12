@@ -1,30 +1,19 @@
 <template>
-    <template if:true={isViewList}>
-        <lightning-card title="Expense List">
-            <lightning-button label="New" slot="actions" onclick={createNew}></lightning-button>
-            <c-expense-list-filter records={data} total-records={data.length} show-search-box="true"
-                onpaginatorchange={handlePaginatorChange}>
-            </c-expense-list-filter>
-            <div class="slds-m-around_x-small">
-                <lightning-datatable key-field="Id" data={recordsToDisplay} columns={columns} hide-checkbox-column
-                    show-row-number-column row-number-offset={rowNumberOffset} onrowaction={handleRowAction}>
-                </lightning-datatable>
-            </div>
-        </lightning-card>
-    </template>
-    <template if:true={isView}>
-        <c-expense-view record-id={recordId} oncloseview={hideComponect}></c-expense-view>
-    </template>
-    <template if:true={isNew}>
-        <c-expense-edit record-id={recordId}  action="New" onrecordaction={hideComponect}></c-expense-edit>
-    </template>
-    <template if:true={isEdit}>
-        <c-expense-edit record-id={recordId} action="Edit" onrecordaction={hideComponect}></c-expense-edit>
-    </template>
-    <template if:true={showModel}>
-        <div class="slds-m-around_x-small">
-            <c-model-popup openmodel={showModel} selected-expense={selectedExpense} 
-                onclosemodel={handleCloseModel}></c-model-popup>
-        </div>
-    </template>
+	<lightning-card title="Expense List" icon-name="standard:expense">
+		<lightning-button label="New" slot="actions" onclick={createNew}></lightning-button>
+		<c-expense-list-filter records={data} total-records={data.length} show-search-box="true"
+			onpaginatorchange={handlePaginatorChange}>
+		</c-expense-list-filter>
+		<div class="slds-m-around_x-small">
+			<lightning-datatable key-field="Id" data={recordsToDisplay} columns={columns} hide-checkbox-column
+				show-row-number-column row-number-offset={rowNumberOffset} onrowaction={handleRowAction}>
+			</lightning-datatable>
+		</div>
+	</lightning-card>
+	<template if:true={showModel}>
+		<div class="slds-m-around_x-small">
+			<c-model-popup openmodel={showModel} selected-expense={selectedExpense} 
+				onclosemodel={handleCloseModel}></c-model-popup>
+		</div>
+	</template>
 </template>
