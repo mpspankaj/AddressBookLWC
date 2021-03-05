@@ -3,38 +3,9 @@
     <fullName>Payment_Mode__c</fullName>
     <externalId>false</externalId>
     <label>Payment Mode</label>
+    <length>200</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
-    <type>Picklist</type>
-    <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Home Cash</fullName>
-                <default>false</default>
-                <label>Home Cash</label>
-            </value>
-            <value>
-                <fullName>Self Cash</fullName>
-                <default>false</default>
-                <label>Self Cash</label>
-            </value>
-            <value>
-                <fullName>HDFC Credit Card</fullName>
-                <default>false</default>
-                <label>HDFC Credit Card</label>
-            </value>
-            <value>
-                <fullName>Net Bank</fullName>
-                <default>false</default>
-                <label>Net Bank</label>
-            </value>
-            <value>
-                <fullName>None</fullName>
-                <default>false</default>
-                <label>None</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+    <type>Text</type>
+    <unique>false</unique>
 </CustomField>
