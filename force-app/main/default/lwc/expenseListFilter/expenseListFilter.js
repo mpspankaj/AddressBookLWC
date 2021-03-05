@@ -1,10 +1,8 @@
 import { LightningElement, api, track } from "lwc";
+import { DELAY, recordsPerPage, showIt, hideIt } from './constants.js';
 
-const DELAY = 300;
-const recordsPerPage = [5, 10, 25, 50, 100];
 const pageNumber = 1;
-const showIt = "visibility:visible";
-const hideIt = "visibility:hidden"; //visibility keeps the component space, but display:none doesn't
+
 export default class ExpenseListFilter extends LightningElement {
   @api showSearchBox = false; //Show/hide search box; valid values are true/false
   @api showPagination; //Show/hide pagination; valid values are true/false
@@ -24,7 +22,7 @@ export default class ExpenseListFilter extends LightningElement {
   connectedCallback() {
     try {
       if (this.pageSizeOptions && this.pageSizeOptions.length > 0)
-        this.pageSize = this.pageSizeOptions[0];
+        this.pageSize = this.pageSizeOptions[1];
       else {
         this.pageSize = this.totalRecords;
         this.showPagination = false;
