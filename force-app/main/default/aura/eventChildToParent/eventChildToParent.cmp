@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="Name" type="String"></aura:attribute>
+    <aura:handler name="cmpEvent" event="c:messageEvent" action="{!c.handleComponentEvent}"/>
+    <lightning:card title="Event in aura" iconName="custom:custom30">
+        <p> IN Parent {!v.Name}</p>
+        <c:child1 name="{!v.Name}" ></c:child1>
+        <c:child4 Name="{!v.Name}" ></c:child4>
+    </lightning:card>
+
+</aura:component>	

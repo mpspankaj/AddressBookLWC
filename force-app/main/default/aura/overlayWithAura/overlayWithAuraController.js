@@ -2,7 +2,6 @@
   handleShowModalFooter: function (component, event, helper) {
     var modalBody;
     var modalFooter;
-    console.log("handleShowModalFooter");
     $A.createComponents(
       [
         ["c:modalContent", {}],

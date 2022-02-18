@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="Name" type="string"></aura:attribute>
+    <aura:handler name="cmpEvent" event="c:messageEvent" action="{!c.handleComponentEvent}"/>
+    <lightning:card title="Child 2" iconName="custom:custom30">
+        <p> IN Child 2 {!v.Name}</p>
+        <c:child3 name="{!v.Name}" ></c:child3>
+    </lightning:card>
+    
+</aura:component>	

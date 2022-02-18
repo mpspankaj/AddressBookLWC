@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="Name" type="string"></aura:attribute>
+    <aura:registerEvent name="cmpEvent" type="c:messageEvent"/>
+    <aura:handler name="change" value="{!v.Name}" action="{!c.handelValueChange}"></aura:handler>
+    <lightning:card title="Child 3" iconName="custom:custom30">
+        <p> IN Child 3 {!v.Name}</p>
+        <lightning:input type="String" value="{!v.Name}" label="Enter your name"></lightning:input>
+    </lightning:card>
+</aura:component>	

@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:attribute name="Name" type="string"></aura:attribute>
+    <aura:handler name="cmpEvent" event="c:messageEvent" action="{!c.handleComponentEvent}"/>
+    <p> IN Child 4 {!v.Name}</p>
+</aura:component>	
